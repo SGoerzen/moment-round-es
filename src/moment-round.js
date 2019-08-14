@@ -30,7 +30,7 @@
     var rounded = false;
     var subRatio = 1;
     var maxValue ;
-    
+
     // make sure key is plural
     if ( key.length > 1 && key !== 'mm' && key.slice( -1 ) !== 's' ) {
       key += 's';
@@ -45,7 +45,7 @@
     var get = 'get' + methods[ key ].name;
     var set = 'set' + methods[ key ].name;
 
-    for( var k in methods ){
+    Object.keys(methods).map(function(k) {
       if ( k === key ) {
         value = _this._d[ get ]();
         maxValue = methods[ k ].maxValue;
@@ -55,7 +55,7 @@
         value += _this._d[ 'get' + methods[ k ].name ]() / subRatio;
         _this._d[ 'set' + methods[ k ].name ](0);
       }
-    }
+    });
 
     value = Math[ direction ]( value / precision ) * precision;
     value = Math.min( value, maxValue );
