@@ -26,21 +26,18 @@ m.ceil(20, 'hours').format( 'YYYY-MM-DD HH:mm:ss.SSS' ); 			// 2015-06-19 00:00:
 Possible values to round to are `hours`, `minutes`, `seconds`, `milliseconds`
 
 ###Alias values
+As it makes unnecessary redundancy this package is only supporting plural namings.
 
 ``` javascript
 mm --> milliseconds
 Milliseconds --> milliseconds
-millisecond --> milliseconds
 s --> seconds
 Seconds --> seconds
-second --> seconds
 m --> minutes
 Minutes --> minutes
-minute --> minutes
 h --> hours
 H --> hours
 Hours --> hours
-hour --> hours
 ```
 
 ## Installation
