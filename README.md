@@ -50,7 +50,7 @@ Hours --> hours
 npm install moment-round-es
 ```
 
-And then `require` it:
+And then `import` it:
 
 ``` typescript
 import moment from 'moment';
