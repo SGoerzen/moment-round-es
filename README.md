@@ -1,13 +1,19 @@
-# moment-round
-
-:warning: Not maintained, please visit 1 of the forks.
+# moment-round-es
 
 This is a plugin for [moment.js][moment] and will round date/time to a given interval.
 
+This is a fork of https://github.com/harmvandeven/moment-round. Thus, credits to Thomas Vanderhaeghen.
+This fork targets to be used in EcmaScript 6 Syntax and TypeScript. In opposite to the origin project, this repository 
+is not supporting gulp or bower. If you need support for gulp or bower, please visit the origin project.
+
+
 ## Examples
 
-``` javascript
-var m = new moment(); 
+``` typescript
+import moment from "moment";
+import "moment-round-es";
+
+const m = moment(); 
 m.format( 'YYYY-MM-DD HH:mm:ss.SSS' ); 								// 2015-06-18 15:30:19.123
 m.round( 100, 'milliseconds' ).format( 'YYYY-MM-DD HH:mm:ss.SSS' ); // 2015-06-18 15:30:20.100
 m.round(5, 'seconds').format( 'YYYY-MM-DD HH:mm:ss.SSS' ); 			// 2015-06-18 15:30:20.000
@@ -39,42 +45,31 @@ hour --> hours
 
 ## Installation
 
-### Browser
-
-``` html
-<script src="moment.js"></script>
-<script src="moment-round.js"></script>
-```
 
 ### Node /NPM
 
-**WARNING:** Not compatible with Webpack. Use [SpotOnINC's fork](https://github.com/SpotOnInc/moment-round/) instead.
 
 ``` sh
-npm install moment-round --save-dev
+npm install moment-round-es
 ```
 
 And then `require` it:
 
-``` javascript
-var moment = require('moment');
-require('moment-round');
-```
-
-### Bower
-
-``` sh
-bower install moment-round
+``` typescript
+import moment from 'moment';
+// or (depends on)
+import * as moment from "moment";
+import "moment-round-es";
 ```
 
 ## Running tests
 ```
-gulp test
+npm test
 ```
 
 ## License
 
-moment-round is [LICENSED][license].
+moment-round-es is [LICENSED][license].
 
 [license]: https://creativecommons.org/licenses/by-sa/3.0/us/
 [moment]: http://momentjs.com/

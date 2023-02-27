@@ -1,6 +1,6 @@
 import * as moment from "moment";
-import "../src/moment-round";
-import {RoundKey} from "../lib/moment-round";
+import "../src/index.ts"
+import {RoundKey} from "../src";
 
 describe('Moment Extension (moment-round)', () => {
   const assert = (date: string, format: string, r: (m: moment.Moment) => moment.Moment, expected: string) => {
