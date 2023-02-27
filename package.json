@@ -1,6 +1,6 @@
 {
   "name": "moment-round-es",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Date rounding for Moment.js for EcmaScript 6 and TypeScript.",
   "keywords": [
     "moment",
